@@ -2,17 +2,17 @@ import { useState } from 'react';
 
 export default function InteractivePolygon() {
   const [points, setPoints] = useState([
-    { x: 150, y: 150 },
-    { x: 250, y: 150 },
-    { x: 250, y: 250 },
-    { x: 150, y: 250 }
+    { x: 125, y: 125 },
+    { x: 275, y: 125 },
+    { x: 275, y: 275 },
+    { x: 125, y: 275 }
   ]);
 
   const [graphPoints, setgraphPoints] = useState([
-    { x: 150, y: 150 },
-    { x: 250, y: 150 },
-    { x: 250, y: 250 },
-    { x: 150, y: 250 }
+    { x: 125, y: 125 },
+    { x: 275, y: 125 },
+    { x: 275, y: 275 },
+    { x: 125, y: 275 }
   ]);
   
   const [draggedPointIndex, setDraggedPointIndex] = useState(null);
@@ -215,16 +215,16 @@ export default function InteractivePolygon() {
   
   const handleResetPoints = () => {
     setPoints([
-      { x: 150, y: 150 },
-      { x: 250, y: 150 },
-      { x: 250, y: 250 },
-      { x: 150, y: 250 }
+      { x: 125, y: 125 },
+      { x: 275, y: 125 },
+      { x: 275, y: 275 },
+      { x: 125, y: 275 }
     ]);
     setgraphPoints([
-      { x: 150, y: 150 },
-      { x: 250, y: 150 },
-      { x: 250, y: 250 },
-      { x: 150, y: 250 }
+      { x: 125, y: 125 },
+      { x: 275, y: 125 },
+      { x: 275, y: 275 },
+      { x: 125, y: 275 }
     ]);
   };
 
@@ -233,9 +233,9 @@ export default function InteractivePolygon() {
   
   return (
     <div className="flex flex-col items-center p-4 max-w-3xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Interactive Visibility Graph</h2>
+      <h2 className="text-2xl font-bold mb-4">Interactive Polygon and Subsequent Visibility Graph</h2>
       <div className="mb-4 text-center">
-        <p>Click and drag any point to modify the polygon</p>
+        <p>Click and drag any point to modify the interactive polygon on the left and the visibility graph on the right will update accordingly to reflect the visibility relationship of each pair of vertices!</p>
         <div className="flex gap-4 justify-center my-4">
           <button 
             onClick={handleAddPoint}
@@ -253,6 +253,9 @@ export default function InteractivePolygon() {
       </div>
       <div className = "flex">
         <div className="border border-gray-300 rounded-lg bg-white shadow-lg mb-4">
+          <div className="p-3 border-b border-gray-300 bg-gray-100 font-medium text-lg text-center">
+            Interactive Polygon
+          </div>
           <svg 
             width="400" 
             height="400" 
@@ -299,10 +302,12 @@ export default function InteractivePolygon() {
         </div>
 
         <div className="border border-gray-300 rounded-lg bg-white shadow-lg mb-4">
+          <div className="p-3 border-b border-gray-300 bg-gray-100 font-medium text-lg text-center">
+            Visibility Graph
+          </div>
           <svg 
             width="400" 
             height="400" 
-            onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
             className="bg-gray-50"
