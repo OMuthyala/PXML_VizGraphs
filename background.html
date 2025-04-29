@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background - Visualizing Visibility Graphs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <h1>Visualizing Visibility Graphs</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="background.html">Mathematical Background</a></li>
+        <li><a href="visual.html">Visualizer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Visualizer Section -->
+  <section id="background">
+    <div class="container">
+      <h2>Mathematical Background</h2><br>
+      <p>
+        The Visibility Graph problem arises originally from the Art Gallery Problem in Geometry. Imagine a polygonal region that represents an art gallery. The goal of this problem is to determine the minimum number of guards that are 
+        needed such that every point inside the gallery is under surveillance. This leads us to a question that follows: How can we mathematically 
+        describe what each guard can see? <br><br>
+
+        Visibility between the points in the polygon is key to solving this problem. If every vertex within the polygon can "see" each other (meaning a line segment 
+        can be drawn such that it connects two points while remaining entirely inside the region - we will put a picture to demonstrate). In this case, 
+        a single guard can protect the entire region. This insight then takes us to our question: the visibility graph problem. A visibility graph can be constructed 
+        by considering each vertex on the polygon as a node on the graph. We then connect two nodes with an edge if one vertex can see another within the polygon. <br><br>
+
+        The unsolved question (from Devadoss and O'Rourke) is to be able to characterize graphs as visibility graphs of polygons. <br><br>
+
+        This tool gives you the ability to view in real-time how the visibility graph of a polygon changes as different vertices of the polygon are being manipulated, 
+        being a perfect tool to get closer to finding an answer to the problem. <br><br>
+
+        To learn more about the art gallery problem and the math behind visibility graphs, the following resources will be extremely useful: <br>
+
+        <ul>
+          <li>List some good resources</li>
+        </ul>
+      </p>
+
+      <br>
+      <br>
+      <br>
+
+      <p>References: 
+        <ul>
+          <li>Devadoss and O'Rourke: Discrete and Computational Geometry</li>
+          <li>Ghosh, S. K. and Goswami. Unsolved problems in visibility graphs of points, segments, and polygons.</li>
+        </ul>
+      </p>
+    </div>
+  </section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>
+        Have any questions or suggestions? Reach out via email at 
+        <a href="mailto:weng83@purdue.edu">weng83@purdue.edu</a>,
+        <a href="mailto:belur@purdue.edu">belur@purdue.edu</a>, 
+        <a href="mailto:francisw@purdue.edu">francisw@purdue.edu</a>, or
+        <a href="mailto:omuthyal@purdue.edu">omuthyal@purdue.edu</a>. 
+      </p>
+    </div>
+  </section>
+  
+
+
+
+  <!-- Link to external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
