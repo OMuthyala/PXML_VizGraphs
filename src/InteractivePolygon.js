@@ -233,7 +233,17 @@ export default function InteractivePolygon() {
   
   return (
     <div className="flex flex-col items-center p-4 max-w-3xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Interactive Polygon and Subsequent Visibility Graph</h2>
+      <div className='flex'>
+        <a href="visual.html">
+          <button style={{ position: 'relative', top: '8px', left: '-100px' }}>
+            <img src="back_button.png" alt="Home" width="20" />
+          </button>
+        </a>
+
+        
+        <h2 className="text-2xl font-bold mb-4">Interactive Polygon and Subsequent Visibility Graph</h2>
+      </div>
+      
       <div className="mb-4 text-center">
         <p>Click and drag any point to modify the interactive polygon on the left and the visibility graph on the right will update accordingly to reflect the visibility relationship of each pair of vertices!</p>
         <div className="flex gap-4 justify-center my-4">
